@@ -1,0 +1,79 @@
+﻿@using _09122023_MvcFormElementleri2.Models
+@model Kullanici
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <div> 
+        @using(Html.BeginForm())
+            {
+            <table>
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(x => x.Ad)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Ad)
+                        @Html.ValidationMessageFor(x => x.Ad)
+
+                    </td>
+
+                </tr>
+                @* ------------------- *@
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(x => x.Soyad)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Soyad)
+                        @Html.ValidationMessageFor(x => x.Soyad)
+                    </td>
+                </tr>
+                @* --------------------- *@
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(x => x.Email)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Email)
+                        @Html.ValidationMessageFor(x => x.Email)
+                    </td>
+                </tr>
+                @* --------------------- *@
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(x => x.Parola)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.Parola)
+                        @Html.ValidationMessageFor(x => x.Parola)
+                    </td>
+                </tr>
+                @* --------------------- *@
+                <tr>
+                    <td>
+                        @Html.DisplayNameFor(x => x.ParolaTekrar)
+                    </td>
+                    <td>
+                        @Html.EditorFor(x => x.ParolaTekrar)
+                        @Html.ValidationMessageFor(x => x.ParolaTekrar)
+                    </td>
+                </tr>
+            </table>
+         <button type="submit">Gönder</button>
+
+            }
+    </div>
+</body>
+</html>
